@@ -8,6 +8,14 @@ In the project directory, you can run:
 
 ### `npm start`
 
+Packages:
+- Material UI
+- React Pro Sidebar
+- formik (forms)
+- yup (validation)
+- Full Calendar
+- Nivo Charts
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
