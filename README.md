@@ -11,8 +11,8 @@ In the project directory, you can run:
 Packages:
 - Material UI
 - React Pro Sidebar
-- formik (forms)
-- yup (validation)
+- formik (form)
+- yup (form validation)
 - Full Calendar
 - Nivo Charts
 
