@@ -40,7 +40,7 @@ const BarChart = ({ isDashboard = false }) => {
             },
             tooltip: {
                container: {
-                  color: colors.primary[900],
+                  color: colors.primary[500],
                },
             }
          }}
