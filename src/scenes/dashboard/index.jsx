@@ -20,7 +20,21 @@ const Dashboard = () => {
    return (
       <Box m="20px">
          {/* HEADER */}
-         <Box display="flex" justifyContent="space-between" alignItems="center">
+         <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            sx={{
+               flexDirection: {
+                  xs: "column",
+                  sm: "row",
+               },
+               marginBottom: {
+                  xs: "20px",
+                  sm: "0",
+               },
+            }}
+         >
             <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
             <Box>
@@ -48,11 +62,17 @@ const Dashboard = () => {
          >
             {/* ROW 1 - Statbox's */}
             <Box
-               gridColumn="span 3"
                backgroundColor={colors.primary[400]}
                display="flex"
                alignItems="center"
                justifyContent="center"
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     sm: "span 6",
+                     md: "span 3",
+                  },
+               }}
             >
                <StatBox
                   title="12,361"
@@ -67,11 +87,17 @@ const Dashboard = () => {
                />
             </Box>
             <Box
-               gridColumn="span 3"
                backgroundColor={colors.primary[400]}
                display="flex"
                alignItems="center"
                justifyContent="center"
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     sm: "span 6",
+                     md: "span 3",
+                  },
+               }}
             >
                <StatBox
                   title="431,225"
@@ -86,11 +112,17 @@ const Dashboard = () => {
                />
             </Box>
             <Box
-               gridColumn="span 3"
                backgroundColor={colors.primary[400]}
                display="flex"
                alignItems="center"
                justifyContent="center"
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     sm: "span 6",
+                     md: "span 3",
+                  },
+               }}
             >
                <StatBox
                   title="32,441"
@@ -105,11 +137,17 @@ const Dashboard = () => {
                />
             </Box>
             <Box
-               gridColumn="span 3"
                backgroundColor={colors.primary[400]}
                display="flex"
                alignItems="center"
                justifyContent="center"
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     sm: "span 6",
+                     md: "span 3",
+                  },
+               }}
             >
                <StatBox
                   title="1,325,134"
@@ -126,9 +164,14 @@ const Dashboard = () => {
 
             {/* ROW 2 */}
             <Box
-               gridColumn="span 8"
                gridRow="span 2"
                backgroundColor={colors.primary[400]}
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     md: "span 8",
+                  },
+               }}
             >
                <Box
                   mt="25px"
@@ -136,6 +179,12 @@ const Dashboard = () => {
                   display="flex "
                   justifyContent="space-between"
                   alignItems="center"
+                  sx={{
+                     p: {
+                        xs: "0 15px",
+                        md: "0 30px",
+                     },
+                  }}
                >
                   <Box>
                      <Typography
@@ -166,10 +215,15 @@ const Dashboard = () => {
                </Box>
             </Box>
             <Box
-               gridColumn="span 4"
                gridRow="span 2"
                backgroundColor={colors.primary[400]}
                overflow="auto"
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     md: "span 4",
+                  },
+               }}
             >
                <Box
                   display="flex"
@@ -218,10 +272,16 @@ const Dashboard = () => {
 
             {/* ROW 3 */}
             <Box
-               gridColumn="span 4"
                gridRow="span 2"
                backgroundColor={colors.primary[400]}
                p="30px"
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     md: "span 6",
+                     lg: "span 4",
+                  },
+               }}
             >
                <Typography variant="h5" fontWeight="600">
                   Campaign
@@ -244,9 +304,15 @@ const Dashboard = () => {
                </Box>
             </Box>
             <Box
-               gridColumn="span 4"
                gridRow="span 2"
                backgroundColor={colors.primary[400]}
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     md: "span 6",
+                     lg: "span 4",
+                  },
+               }}
             >
                <Typography
                   variant="h5"
@@ -260,10 +326,16 @@ const Dashboard = () => {
                </Box>
             </Box>
             <Box
-               gridColumn="span 4"
                gridRow="span 2"
                backgroundColor={colors.primary[400]}
                padding="30px"
+               sx={{
+                  gridColumn: {
+                     xs: "span 12",
+                     md: "span 12",
+                     lg: "span 4",
+                  },
+               }}
             >
                <Typography
                   variant="h5"

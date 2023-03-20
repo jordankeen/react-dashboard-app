@@ -13,6 +13,7 @@ Packages:
 - React Pro Sidebar
 - formik (form)
 - yup (form validation)
+- Datagrid from Material UI
 - Full Calendar
 - Nivo Charts
 

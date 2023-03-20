@@ -436,53 +436,53 @@ export const mockLineData = [
       color: tokens("dark").greenAccent[500],
       data: [
          {
-            x: "plane",
+            x: "A",
             y: 101,
          },
          {
-            x: "helicopter",
+            x: "B",
             y: 75,
          },
          {
-            x: "boat",
+            x: "C",
             y: 36,
          },
          {
-            x: "train",
+            x: "D",
             y: 216,
          },
          {
-            x: "subway",
+            x: "E",
             y: 35,
          },
          {
-            x: "bus",
+            x: "F",
             y: 236,
          },
-         {
-            x: "car",
-            y: 88,
-         },
-         {
-            x: "moto",
-            y: 232,
-         },
-         {
-            x: "bicycle",
-            y: 281,
-         },
-         {
-            x: "horse",
-            y: 1,
-         },
-         {
-            x: "skateboard",
-            y: 35,
-         },
-         {
-            x: "others",
-            y: 14,
-         },
+         // {
+         //    x: "car",
+         //    y: 88,
+         // },
+         // {
+         //    x: "moto",
+         //    y: 232,
+         // },
+         // {
+         //    x: "bicycle",
+         //    y: 281,
+         // },
+         // {
+         //    x: "horse",
+         //    y: 1,
+         // },
+         // {
+         //    x: "skateboard",
+         //    y: 35,
+         // },
+         // {
+         //    x: "others",
+         //    y: 14,
+         // },
       ],
    },
    {
@@ -490,53 +490,53 @@ export const mockLineData = [
       color: tokens("dark").blueAccent[300],
       data: [
          {
-            x: "plane",
+            x: "A",
             y: 212,
          },
          {
-            x: "helicopter",
+            x: "B",
             y: 190,
          },
          {
-            x: "boat",
+            x: "C",
             y: 270,
          },
          {
-            x: "train",
+            x: "D",
             y: 9,
          },
          {
-            x: "subway",
+            x: "E",
             y: 75,
          },
          {
-            x: "bus",
+            x: "F",
             y: 175,
          },
-         {
-            x: "car",
-            y: 33,
-         },
-         {
-            x: "moto",
-            y: 189,
-         },
-         {
-            x: "bicycle",
-            y: 97,
-         },
-         {
-            x: "horse",
-            y: 87,
-         },
-         {
-            x: "skateboard",
-            y: 299,
-         },
-         {
-            x: "others",
-            y: 251,
-         },
+         // {
+         //    x: "car",
+         //    y: 33,
+         // },
+         // {
+         //    x: "moto",
+         //    y: 189,
+         // },
+         // {
+         //    x: "bicycle",
+         //    y: 97,
+         // },
+         // {
+         //    x: "horse",
+         //    y: 87,
+         // },
+         // {
+         //    x: "skateboard",
+         //    y: 299,
+         // },
+         // {
+         //    x: "others",
+         //    y: 251,
+         // },
       ],
    },
    {
@@ -544,53 +544,53 @@ export const mockLineData = [
       color: tokens("dark").redAccent[200],
       data: [
          {
-            x: "plane",
+            x: "A",
             y: 191,
          },
          {
-            x: "helicopter",
+            x: "B",
             y: 136,
          },
          {
-            x: "boat",
+            x: "C",
             y: 91,
          },
          {
-            x: "train",
+            x: "D",
             y: 190,
          },
          {
-            x: "subway",
+            x: "E",
             y: 211,
          },
          {
-            x: "bus",
+            x: "F",
             y: 152,
          },
-         {
-            x: "car",
-            y: 189,
-         },
-         {
-            x: "moto",
-            y: 152,
-         },
-         {
-            x: "bicycle",
-            y: 8,
-         },
-         {
-            x: "horse",
-            y: 197,
-         },
-         {
-            x: "skateboard",
-            y: 107,
-         },
-         {
-            x: "others",
-            y: 170,
-         },
+         // {
+         //    x: "car",
+         //    y: 189,
+         // },
+         // {
+         //    x: "moto",
+         //    y: 152,
+         // },
+         // {
+         //    x: "bicycle",
+         //    y: 8,
+         // },
+         // {
+         //    x: "horse",
+         //    y: 197,
+         // },
+         // {
+         //    x: "skateboard",
+         //    y: 107,
+         // },
+         // {
+         //    x: "others",
+         //    y: 170,
+         // },
       ],
    },
 ];

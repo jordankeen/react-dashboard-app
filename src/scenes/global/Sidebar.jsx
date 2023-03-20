@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { Sidebar as ProSidebar, Menu, MenuItem, useProSidebar } from 'react-pro-sidebar';
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
-import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
@@ -16,6 +15,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 
 // Item - for each side bar menu item
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -29,70 +29,92 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
          }}
          onClick={() => setSelected(title)}
          icon={icon}
+         component={<Link to={to} />}
       >
          <Typography>{title}</Typography>
-         <Link to={to} />
       </MenuItem>
    );
- };
+};
 
 const Sidebar = () => {
    const theme = useTheme();
    const colors = tokens(theme.palette.mode);
+   const { toggleSidebar } = useProSidebar();
    const [isCollapsed, setIsCollapsed] = useState(false);
    const [selected, setSelected] = useState("Dashboard");
 
    return (
       <Box
          sx={{
-            "& .pro-sidebar-inner": {
-               background: `${colors.primary[400]} !important`,
+            position: "sticky",
+            display: "flex",
+            minHeight: "100vh",
+            top: 0,
+            bottom: 0,
+            zIndex: 10000,
+            "& .ps-sidebar-root": {
+               border: "none",
             },
-            "& .pro-icon-wrapper": {
+            "& .ps-menu-button:hover": {
+               color: `${colors.blueAccent[500]} !important`,
                backgroundColor: "transparent !important",
             },
-            "& .pro-inner-item": {
-               padding: "5px 35px 5px 20px !important" ,
-            },
-            "& .pro-inner-item:hover": {
-               color: "#868dfb !Important",
-            },
-            "& .pro-menu-item.active": {
-               color: "#6870fa !important",
+            "& .ps-menu-button.ps-active": {
+               color: `${colors.blueAccent[500]} !important`,
+               backgroundColor: "transparent !important",
             },
          }}
       >
-         <ProSidebar collapsed={isCollapsed}>
+         <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            position="absolute"
+            zIndex="2"
+            top="16px"
+            left="15px"
+         >
+            <IconButton
+               onClick={() => toggleSidebar()}
+            >
+               <MenuOutlinedIcon />
+            </IconButton>
+         </Box>
+         <ProSidebar
+            collapsed={isCollapsed}
+            breakPoint="lg"
+            backgroundColor={colors.primary[400]}
+            borderColor="transparent"
+         >
             <Menu iconShape="square">
                {/* LOGO AND MENU ICON */}
-               <MenuItem
-                  onClick={() => setIsCollapsed(!isCollapsed)}
-                  icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
-                  style={{
-                     margin: "10px 0 20px 0",
-                     color: colors.grey[100],
-                  }}
+               <Box
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  p="10px 10px 10px 15px"
                >
-                  {!isCollapsed && (
-                  <Box
-                     display="flex"
-                     justifyContent="space-between"
-                     alignItems="center"
-                     ml="15px"
+                  <Typography variant="h3" color={colors.grey[100]}>
+                     ADMIN
+                  </Typography>
+                  <IconButton
+                     onClick={() => toggleSidebar()}
+                     sx={{
+                        display: {
+                           md: "none",
+                        },
+                     }}
                   >
-                     <Typography variant="h3" color={colors.grey[100]}>
-                        ADMIN
-                     </Typography>
-                     <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                        <MenuOutlinedIcon />
-                     </IconButton>
-                  </Box>
-                  )}
-               </MenuItem>
-               
+                     <ArrowBackIosNewOutlinedIcon />
+                  </IconButton>
+               </Box>
+               {/* </MenuItem> */}
+
                {/* User */}
                {!isCollapsed && (
-                  <Box mb="25px">
+                  <Box
+                     mb="25px"
+                  >
                      <Box display="flex" justifyContent="center" alignItems="center">
                         <img
                            alt="profile-user"

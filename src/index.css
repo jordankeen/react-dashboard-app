@@ -5,7 +5,6 @@ body,
 #root,
 .app,
 .content {
-   height: 100%;
    width: 100%;
    font-family: 'Source Sans Pro', sans-serif;
 }
@@ -33,4 +32,36 @@ body,
 /* Handle on hover */
 ::-webkit-scrollbar-track:hover {
    background-color: #555;
+}
+
+@keyframes swing {
+
+   0%,
+   30%,
+   50%,
+   70%,
+   100% {
+      transform: rotate(0deg);
+   }
+
+   10% {
+      transform: rotate(10deg);
+   }
+
+   40% {
+      transform: rotate(-10deg);
+   }
+
+   60% {
+      transform: rotate(5deg);
+   }
+
+   80% {
+      transform: rotate(-5deg);
+   }
+}
+
+.ps-menu-button:hover .ps-menu-icon svg {
+   -webkit-animation: swing .5s ease-in-out 1 alternate;
+   animation: swing .5s ease-in-out 1 alternate;
 }
