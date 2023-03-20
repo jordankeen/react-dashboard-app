@@ -6,7 +6,16 @@ const Bar = () => {
    return (
       <Box m="20px">
          <Header title="Bar Chart" subtitle="Simple Bar Chart" />
-         <Box height="75vh">
+         <Box
+            maxWidth="1440px"
+            sx={{
+               height: {
+                  xs: "250px",
+                  sm: "500px",
+                  lg: "50vh",
+               }
+            }}
+         >
             <BarChart />
          </Box>
       </Box>
