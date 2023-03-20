@@ -8,27 +8,35 @@ const Invoices = () => {
    const theme = useTheme();
    const colors = tokens(theme.palette.mode);
    const columns = [
-      { field: "id", headerName: "ID" },
+      {
+         field: "id",
+         headerName: "ID",
+         minWidth: 50,
+      },
       {
          field: "name",
          headerName: "Name",
          flex: 1,
          cellClassName: "name-column--cell",
+         minWidth: 125,
       },
       {
          field: "phone",
          headerName: "Phone Number",
          flex: 1,
+         minWidth: 105,
       },
       {
          field: "email",
          headerName: "Email",
          flex: 1,
+         minWidth: 150,
       },
       {
          field: "cost",
          headerName: "Cost",
          flex: 1,
+         minWidth: 50,
          renderCell: (params) => (
             <Typography color={colors.greenAccent[500]}>
                ${params.row.cost}
@@ -39,6 +47,7 @@ const Invoices = () => {
          field: "date",
          headerName: "Date",
          flex: 1,
+         minWidth: 100,
       },
    ];
 

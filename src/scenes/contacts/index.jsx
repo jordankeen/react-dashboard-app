@@ -10,13 +10,23 @@ const Contacts = () => {
    const colors = tokens(theme.palette.mode);
 
    const columns = [
-      { field: "id", headerName: "ID", flex: 0.5 },
-      { field: "registrarId", headerName: "Registrar ID" },
+      {
+         field: "id",
+         headerName: "ID",
+         flex: 0.5,
+         minWidth: 50,
+      },
+      { 
+         field: "registrarId", 
+         headerName: "Registrar ID",
+         minWidth: 50,
+      },
       {
          field: "name",
          headerName: "Name",
          flex: 1,
          cellClassName: "name-column--cell",
+         minWidth: 125,
       },
       {
          field: "age",
@@ -24,31 +34,37 @@ const Contacts = () => {
          type: "number",
          headerAlign: "left",
          align: "left",
+         minWidth: 50,
       },
       {
          field: "phone",
          headerName: "Phone Number",
          flex: 1,
+         minWidth: 105,
       },
       {
          field: "email",
          headerName: "Email",
          flex: 1,
+         minWidth: 150,
       },
       {
          field: "address",
          headerName: "Address",
          flex: 1,
+         minWidth: 210,
       },
       {
          field: "city",
          headerName: "City",
          flex: 1,
+         minWidth: 100,
       },
       {
          field: "zipCode",
          headerName: "Zip Code",
          flex: 1,
+         minWidth: 50,
       },
    ];
 

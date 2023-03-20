@@ -29,19 +29,19 @@ const Team = () => {
          type: "number",
          headerAlign: "left",
          align: "left",
-         minWidth: 60
+         minWidth: 60,
       },
       {
          field: "phone",
          headerName: "Phone Number",
          flex: 1,
-         minWidth: 105
+         minWidth: 105,
       },
       {
          field: "email",
          headerName: "Email",
          flex: 1,
-         minWidth: 150
+         minWidth: 150,
       },
       {
          field: "accessLevel",
