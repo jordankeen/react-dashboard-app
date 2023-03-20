@@ -11,12 +11,17 @@ const Team = () => {
    const theme = useTheme();
    const colors = tokens(theme.palette.mode);
    const columns = [
-      { field: "id", headerName: "ID" },
+      {
+         field: "id",
+         headerName: "ID",
+         minWidth: 50,
+      },
       {
          field: "name",
          headerName: "Name",
          flex: 1,
          cellClassName: "name-column--cell",
+         minWidth: 125,
       },
       {
          field: "age",
@@ -24,26 +29,30 @@ const Team = () => {
          type: "number",
          headerAlign: "left",
          align: "left",
+         minWidth: 60
       },
       {
          field: "phone",
          headerName: "Phone Number",
          flex: 1,
+         minWidth: 105
       },
       {
          field: "email",
          headerName: "Email",
          flex: 1,
+         minWidth: 150
       },
       {
          field: "accessLevel",
          headerName: "Access Level",
          flex: 1,
+         minWidth: 120,
          renderCell: ({ row: { access } }) => {
             return (
                <Box
-                  width="60%"
-                  m="0 auto"
+                  width="100%"
+                  maxWidth="200px"
                   p="5px"
                   display="flex"
                   justifyContent="center"
